@@ -101,10 +101,13 @@ const Services = (props:header):JSX.Element=>{
                         <div className="services__plans-container-1">
                         <img alt="Standard" src={standard}  className="services__plans-container-img plans__image-1" />
                         <h2>Standard Plan</h2>
+                        <h2>500GB</h2>
                         </div>
+                        
                         <div className="services__plans-container-2">
                         <img alt="King" src={king}  className="services__plans-container-img plans__image-2" />
                         <h2 className="services__plans-container-text">King Plan</h2>
+                        <h2>5TB</h2>
                         </div>
                     </div>
               </div>)

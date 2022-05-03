@@ -151,6 +151,10 @@ a {
   align-items: center;
   background: linear-gradient(rgba(31, 145, 211, 0.4), rgba(31, 145, 211, 0.4));
   margin-right: calc(1rem + 3vw);
+  min-width: min-content;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
 }
 
 .services__plans-container-1 h2 {
@@ -165,6 +169,9 @@ a {
   background: linear-gradient(rgba(31, 145, 211, 0.4), rgba(31, 145, 211, 0.4));
   margin-left: calc(1rem + 3vw);
   min-width: calc(3rem + 6vw);
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
 }
 
 .services__plans-container-2 h2 {
@@ -172,16 +179,43 @@ a {
   text-align: center;
 }
 
+.services__plans-container-1::before, .services__plans-container-2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 0.12rem;
+  width: 100%;
+  background: linear-gradient(90deg, #1e2218 0%, #4c5446 49%, #052f26 100%);
+  animation: moveright 1.8s infinite;
+  z-index: 2;
+}
+
+.services__plans-container-1::after, .services__plans-container-2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: -100%;
+  height: 0.12rem;
+  width: 100%;
+  background: linear-gradient(90deg, #1e2218 0%, #4c5446 49%, #052f26 100%);
+  animation: moveleft 1.8s infinite;
+  z-index: 2;
+}
+
 .services__plans-container-img {
   background-position: center;
   background-repeat: no-repeat;
   height: calc(10vh + 1rem);
   width: 100%;
+  padding: 0.2rem;
   border: none;
 }
 
 .services__plans-container .plans__image-1 {
   background-color: aquamarine;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .services__plans-container .plans__image-2 {
@@ -217,6 +251,24 @@ a {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes moveright {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes moveleft {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 100%;
   }
 }
 /*# sourceMappingURL=login.css.map */
