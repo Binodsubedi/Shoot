@@ -19,7 +19,7 @@ a {
 
 .heading {
   grid-column: container-start / container-end;
-  background-color: green;
+  background: linear-gradient(to right, #355c7d, #6c5b7b, #c06c84);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,6 +97,7 @@ a {
 
 .services__textField {
   width: 40%;
+  min-width: min-content;
   text-align: center;
   letter-spacing: 0.2rem;
   line-height: calc(1rem + 4.5vh);
@@ -104,8 +105,11 @@ a {
   opacity: 0;
   transition: all 0.8s ease-in-out;
   font-family: 'Montserrat', sans-serif;
-  color: black;
+  color: #16324b;
+  background: linear-gradient(to right, #00b4db, #0083b0);
   font-weight: 700;
+  padding: 0 0.18rem;
+  border-radius: 0.6rem;
 }
 
 .services .textField-active {
@@ -120,10 +124,16 @@ a {
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   transition: all 0.3s ease-out;
-  border: 0.2rem solid greenyellow;
-  background-color: paleturquoise;
+  border: none;
+  background-color: #42cfc1;
   transform: translateY(5rem);
+  font-size: 1.2rem;
+  border-radius: 0.2rem;
   opacity: 0;
+}
+
+.services__button a {
+  color: #193248;
 }
 
 .services__button:hover {
