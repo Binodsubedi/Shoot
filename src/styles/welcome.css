@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-family: 'Montserrat', sans-serif;
+}
+
 a {
   text-decoration: none;
 }
@@ -121,8 +125,6 @@ a {
 .services__button {
   margin-top: calc(0.8rem + 3vw);
   padding: 0.6rem;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
   transition: all 0.3s ease-out;
   border: none;
   background-color: #42cfc1;
@@ -133,6 +135,8 @@ a {
 }
 
 .services__button a {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 900;
   color: #193248;
 }
 
@@ -242,7 +246,45 @@ a {
   grid-column: container-start/ container-end;
   grid-row: row-start 2 / row-end 2;
   height: 400px;
-  background-color: aquamarine;
+  background-color: #48ae8c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.connect--inner-container {
+  display: flex;
+  height: 55%;
+  width: 40%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.connect--inner-container a:active {
+  color: rgba(21, 11, 59, 0.758);
+}
+
+.connect--inner-container__text {
+  font-size: 3.2rem;
+  color: rgba(21, 11, 59, 0.758);
+}
+
+.connect--inner-container__button {
+  padding: 1rem;
+  font-size: 1.4rem;
+  font-family: 'Lobster', cursive !important;
+  color: black;
+  letter-spacing: 0.2rem;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  background: linear-gradient(to right, #00b4db, #0083b0);
+}
+
+.connect--inner-container__button:hover {
+  background: #b27b8a;
+  border: 0.1rem solid burlywood;
 }
 
 .aboutUs {
@@ -281,4 +323,4 @@ a {
     right: 100%;
   }
 }
-/*# sourceMappingURL=login.css.map */
+/*# sourceMappingURL=welcome.css.map */

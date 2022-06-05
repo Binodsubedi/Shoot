@@ -151,8 +151,7 @@
     &__button{
         margin-top: calc(0.8rem + 3vw);
         padding: 0.6rem;
-        font-family:'Montserrat', sans-serif;
-        font-weight: 800;
+        
         transition: all 0.3s ease-out;
         // border: 0.2rem solid greenyellow;
         border: none;
@@ -166,6 +165,8 @@
         opacity: 0;
 
         a{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 900;
             color: rgb(25, 50, 72);
         }
         
@@ -337,7 +338,47 @@
     grid-column: container-start/ container-end;
     grid-row: row-start 2 / row-end 2;
     height: 400px;
-    background-color: aquamarine;
+    background-color: rgb(72, 174, 140);
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &--inner-container{
+        display: flex;
+        height: 55%;
+        width: 40%;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        a:active{
+            color: rgba(21, 11, 59, 0.758);
+        }
+
+        &__text{
+            font-size: 3.2rem;
+            color:rgba(21, 11, 59, 0.758);
+        }
+
+        &__button{
+            padding: 1rem;
+            font-size: 1.4rem;
+            font-family: 'Lobster', cursive !important;
+            color: black;
+            letter-spacing: 0.2rem;
+            border-radius: 5px;
+            font-family: 'Montserrat', sans-serif;
+            // font-weight: bold;
+            cursor:pointer;
+            background: linear-gradient(to right, #00b4db, #0083b0);  
+        }
+        &__button:hover{
+            background:#b27b8a;
+            border: 0.1rem solid burlywood;
+        }
+    }
+
 }
 
 .aboutUs{

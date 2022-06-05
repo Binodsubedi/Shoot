@@ -1,5 +1,5 @@
 import React from 'react'
-import './../styles/login.css'
+import './../styles/welcome.css'
 import Header from './welcomeComp/Header'
 import Home from './welcomeComp/Home'
 import Services from './welcomeComp/Services'
