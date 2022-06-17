@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Welcome from "./components/welcome";
 import Signup from "./components/signup";
 import Login from "./components/login";
+import DashboardUpload from "./components/dashboard_upload";
 
 
 
@@ -15,6 +16,7 @@ class App extends React.Component{
                 <Route path="/" element={<Welcome/>}/>
                 <Route path="/signup" element={<Signup/>}/>
                 <Route path="/login" element={<Login/>}/>
+                <Route path="/dashboard/upload" element={<DashboardUpload/>}/>
             </Routes>
 
             </BrowserRouter>
