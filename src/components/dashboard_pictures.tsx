@@ -1,9 +1,15 @@
 import React from 'react'
+import NavBar from './dashboardComp/dashboardNav'
+import MainArea from './dashboardComp/dashboardPictureBody'
+import './../styles/dashboardPicture.css'
 
-const dashboard_pictures = () => {
+const Dashboard_pictures = () => {
   return (
-    <div>dashboard_pictures</div>
+    <div className='DPContainer'>
+    <NavBar name='DNav' />
+    <MainArea name='DPBody' />
+    </div>
   )
 }
 
-export default dashboard_pictures
+export default Dashboard_pictures

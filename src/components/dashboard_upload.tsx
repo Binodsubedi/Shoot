@@ -5,12 +5,10 @@ import './../styles/dashboardUpload.css'
 
 const Dashboard_upload = () => {
   return (
-
     <div className='DUContainer'>
     <NavBar name='DNav' />
     <MainArea name='DUBody' />
     </div>
-
   )
 }
 
