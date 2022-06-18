@@ -32,7 +32,7 @@ a {
 
 .DNav--mainItems {
   height: 100%;
-  width: 75%;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,6 +40,12 @@ a {
 
 .DNav--mainItems__logo {
   padding-left: 1.5rem;
+  height: 75%;
+  width: 12%;
+  background-image: url("./../images/logo.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .DNav--mainItems__links {
@@ -50,12 +56,89 @@ a {
   align-items: center;
 }
 
+.DNav--mainItems__links a {
+  color: #482fd6;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1rem;
+  position: relative;
+}
+
+.DNav--mainItems__links a::before {
+  content: '';
+  position: absolute;
+  width: 0.2rem;
+  height: 40%;
+  background-color: #16ad41;
+  top: 0;
+  left: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.DNav--mainItems__links a::after {
+  content: '';
+  position: absolute;
+  width: 0.2rem;
+  height: 40%;
+  background-color: #16ad41;
+  bottom: 0;
+  right: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.DNav--mainItems__links a:hover::before,
+.DNav--mainItems__links a:hover::after {
+  height: 100%;
+  background-color: #3b98b9;
+  transition: all 0.4s ease-in-out;
+}
+
 .DNav--profile {
   padding-right: 1.5rem;
+  height: 75%;
+  width: 8%;
+  background: url("./../images/avatarIcon.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 0.5rem;
 }
 
 .DUBody {
   grid-column: container-start / container-end;
   background-color: beige;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.DUBody--mainContainer {
+  height: 70%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.DUBody--mainContainer__file {
+  height: 10rem;
+  width: 10rem;
+  position: relative;
+  border-radius: 4.5rem;
+  cursor: pointer;
+}
+
+.DUBody--mainContainer__file::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  background: url("./../images/plusIcon.svg"), white;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 /*# sourceMappingURL=dashboardUpload.css.map */
