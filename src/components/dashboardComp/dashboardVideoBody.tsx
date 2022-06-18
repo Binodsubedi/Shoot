@@ -1,8 +1,23 @@
 import React from 'react'
+import DashboardVideoCard from './dashboardVideoCard'
 
 const DashboardVideoBody = ({name}) => {
   return (
-    <div className={name}>DashboardVideoBody</div>
+    <div className={name}>
+      <DashboardVideoCard  />
+      <DashboardVideoCard  />
+      <DashboardVideoCard  />
+      <DashboardVideoCard  />
+      <DashboardVideoCard  />
+      <DashboardVideoCard  />
+      <DashboardVideoCard  />
+      <DashboardVideoCard  />
+      <DashboardVideoCard  />
+      <DashboardVideoCard  />
+      <DashboardVideoCard  />
+      <DashboardVideoCard  />
+      <DashboardVideoCard  />
+    </div>
   )
 }
 
