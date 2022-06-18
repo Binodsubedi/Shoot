@@ -1,8 +1,25 @@
 import React from 'react'
+import DashboardPictureCard from './dashboardPictureCard'
 
 const DashboardPictureBody = ({name}) => {
   return (
-    <div className={name}>DashboardPictureBody</div>
+    <div className={name}>
+
+      <DashboardPictureCard />
+      <DashboardPictureCard />
+      <DashboardPictureCard />
+      <DashboardPictureCard />
+      <DashboardPictureCard />
+      <DashboardPictureCard />
+      <DashboardPictureCard />
+      <DashboardPictureCard />
+      <DashboardPictureCard />
+      <DashboardPictureCard />
+      <DashboardPictureCard />
+      <DashboardPictureCard />
+      <DashboardPictureCard />
+      
+    </div>
   )
 }
 

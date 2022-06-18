@@ -21,4 +21,42 @@ a {
   grid-template-columns: [container-start] 1fr [center-start] repeat(6, [col-start] minmax(min-content, 16.66rem) [col-end]) [center-end] 1fr [container-end];
   grid-template-rows: 14vh minmax(86vh, min-content);
 }
+
+.DPBody {
+  grid-column: container-start / container-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, min-content));
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+.DPBody__cardContainer {
+  padding: 2rem 0;
+  min-height: 8rem;
+  height: min-content;
+}
+
+.DPBody__cardContainer-image {
+  height: 4rem;
+  width: 100%;
+  background-image: url("./../images/ImageIcon.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.DPBody__cardContainer h2 {
+  padding: 1.2rem 0;
+}
+
+.DPBody__cardContainer-download {
+  height: 2rem;
+  width: 100%;
+  background-image: url("./../images/downloadIcon.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
 /*# sourceMappingURL=dashboardPicture.css.map */
