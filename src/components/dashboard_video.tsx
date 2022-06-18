@@ -1,9 +1,17 @@
 import React from 'react'
+import NavBar from './dashboardComp/dashboardNav'
+import MainArea from './dashboardComp/dashboardVideoBody'
+import './../styles/dashboardVideo.css'
 
-const dashboard_video = () => {
+const Dashboard_video = () => {
   return (
-    <div>dashboard_video</div>
+
+    <div className='DVContainer'>
+    <NavBar name='DNav' />
+    <MainArea name='DVBody' />
+    </div>
+
   )
 }
 
-export default dashboard_video
+export default Dashboard_video

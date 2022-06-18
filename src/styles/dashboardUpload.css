@@ -141,4 +141,17 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.DUBody--mainContainer__fileName {
+  font-size: 1rem;
+  padding-left: 0.3rem;
+  border-radius: 0.4rem;
+}
+
+.DUBody--mainContainer button {
+  font-size: 1.2rem;
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
 /*# sourceMappingURL=dashboardUpload.css.map */

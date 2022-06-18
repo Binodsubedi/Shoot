@@ -5,7 +5,7 @@ import Welcome from "./components/welcome";
 import Signup from "./components/signup";
 import Login from "./components/login";
 import DashboardUpload from "./components/dashboard_upload";
-
+import DashboardVideo from "./components/dashboard_video";
 
 
 class App extends React.Component{
@@ -17,6 +17,7 @@ class App extends React.Component{
                 <Route path="/signup" element={<Signup/>}/>
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/dashboard/upload" element={<DashboardUpload/>}/>
+                <Route path="/dashboard/video" element={<DashboardVideo/>}/>
             </Routes>
 
             </BrowserRouter>

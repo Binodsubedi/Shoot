@@ -1,0 +1,7 @@
+.DVContainer{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: [container-start] 1fr [center-start] repeat(6, [col-start] minmax(min-content, 16.66rem) [col-end]) [center-end] 1fr [container-end];
+    grid-template-rows: 14vh minmax(86vh, min-content);
+}

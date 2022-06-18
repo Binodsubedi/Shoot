@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,CAAC;AACD,CAAC,AAAA,OAAO;AACR,CAAC,AAAA,QAAQ,CAAA;EACL,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,UAAU;CACzB;;AAED,AAAA,IAAI,CAAA;EACA,WAAW,EAAC,wBAAwB;CACvC;;AAED,AAAA,CAAC,CAAA;EACG,eAAe,EAAE,IAAI;CACxB;;ACdD,AAAA,YAAY,CAAA;EACR,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,IAAI;EACb,qBAAqB,GAAG,eAAe,EAAE,GAAG,EAAE,YAAY,EAAE,8DAA8D,EAAE,UAAU,EAAE,GAAG,EAAE,aAAa;EAC1J,kBAAkB,EAAE,IAAI,CAAC,yBAAyB;CACrD",
+    "sources": [
+        "../../sass/dashboardVideo.scss",
+        "../../sass/_reset.scss",
+        "../../sass/_dashboardVideoSeparation.scss"
+    ],
+    "names": [],
+    "file": "dashboardVideo.css"
+}

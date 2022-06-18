@@ -3,7 +3,7 @@ import NavBar from './dashboardComp/dashboardNav'
 import MainArea from './dashboardComp/dashboardUploadBody'
 import './../styles/dashboardUpload.css'
 
-const dashboard_upload = () => {
+const Dashboard_upload = () => {
   return (
 
     <div className='DUContainer'>
@@ -14,4 +14,4 @@ const dashboard_upload = () => {
   )
 }
 
-export default dashboard_upload
+export default Dashboard_upload
