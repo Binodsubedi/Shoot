@@ -15,7 +15,7 @@ class Payment(models.Model):
     
 
     def __str__(self):
-        return self.paidDate
+        return str(self.paidDate)
 
 class Photos(models.Model):
     uid = models.ForeignKey(User, on_delete=models.CASCADE, related_name='photos')
@@ -29,4 +29,5 @@ class Videos(models.Model):
     videoName = models.CharField(max_length=40, null=False)
 
     def __str__(self):
-        return self.photoName
+        return self.videoName
+
