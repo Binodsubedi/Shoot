@@ -14,6 +14,16 @@ class UserEP(mixins.CreateModelMixin,mixins.ListModelMixin,generics.GenericAPIVi
     
     def post(self, request, *args, **kwargs):
         return self.create(request, *args, **kwargs)
+
+class UserSpecificEP(mixins.RetrieveModelMixin,mixins.UpdateModelMixin,mixins.DestroyModelMixin,generics.GenericAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+    def get(self, request, *args, **kwargs):
+        return self.retrieve(request, *args, **kwargs)
+
+    def delete(self, request, *args, **kwargs):
+        return self.destroy(request, *args, **kwargs)
     
 
 
