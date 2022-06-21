@@ -1,8 +1,8 @@
 import imp
 from rest_framework.response import Response
 from rest_framework import mixins, generics
-from shootMain.api.serializers import UserSerializer, PaymentSerializer
-from shootMain.models import User, Payment
+from shootMain.api.serializers import UserSerializer, PaymentSerializer,VideoSerializer,PhotoSerializer
+from shootMain.models import Photos, User, Payment, Videos
 
 
 class UserEP(mixins.CreateModelMixin,mixins.ListModelMixin,generics.GenericAPIView):
@@ -52,8 +52,8 @@ class PaymentEP(mixins.RetrieveModelMixin,mixins.UpdateModelMixin,generics.Gener
         return self.update(request, *args, **kwargs)
 
 class PhotosListEP(mixins.CreateModelMixin,mixins.ListModelMixin,generics.GenericAPIView):
-    queryset = Payment.objects.all()
-    serializer_class = PaymentSerializer
+    queryset = Photos.objects.all()
+    serializer_class = PhotoSerializer
 
     def get(self, request, *args, **kwargs):
         return self.list(request, *args, **kwargs)
@@ -62,8 +62,8 @@ class PhotosListEP(mixins.CreateModelMixin,mixins.ListModelMixin,generics.Generi
         return self.create(request, *args, **kwargs)
 
 class PhotoEP(mixins.RetrieveModelMixin,mixins.DestroyModelMixin,generics.GenericAPIView):
-    queryset = Payment.objects.all()
-    serializer_class = PaymentSerializer
+    queryset = Photos.objects.all()
+    serializer_class = PhotoSerializer
 
     def get(self, request, *args, **kwargs):
         return self.retrieve(request, *args, **kwargs)
@@ -72,8 +72,26 @@ class PhotoEP(mixins.RetrieveModelMixin,mixins.DestroyModelMixin,generics.Generi
         return self.destroy(request, *args, **kwargs)
 
 
+class VideoListEP(mixins.CreateModelMixin,mixins.ListModelMixin,generics.GenericAPIView):
+    queryset = Videos.objects.all()
+    serializer_class = VideoSerializer
+
+    def get(self, request, *args, **kwargs):
+        return self.list(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        return self.create(request, *args, **kwargs)
 
 
+class VideoEP(mixins.RetrieveModelMixin,mixins.DestroyModelMixin,generics.GenericAPIView):
+    queryset = Videos.objects.all()
+    serializer_class = VideoSerializer
+
+    def get(self, request, *args, **kwargs):
+        return self.retrieve(request, *args, **kwargs)
+
+    def delete(self, request, *args, **kwargs):
+        return self.destroy(request, *args, **kwargs)
 
 
 
