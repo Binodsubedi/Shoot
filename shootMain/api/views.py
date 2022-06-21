@@ -1,5 +1,6 @@
 import imp
 from rest_framework.response import Response
+from rest_framework.views import APIView
 from rest_framework import mixins, generics
 from shootMain.api.serializers import UserSerializer, PaymentSerializer,VideoSerializer,PhotoSerializer
 from shootMain.models import Photos, User, Payment, Videos
@@ -28,6 +29,31 @@ class UserSpecificEP(mixins.RetrieveModelMixin,mixins.UpdateModelMixin,mixins.De
     def post(self, request, *args, **kwargs):
         return self.update(request, *args, **kwargs)
 
+
+class UserCheckEP(APIView):
+    def post(self, request):
+        # print(request.data['username'])
+        total = User.objects.all()
+        # data = User.objects.get(username=request.data['username'])
+        data = request.data
+        checkData = total.filter(username=request.data['username']).values()[0]
+
+        if checkData and checkData['username'] == data['username'] and checkData['password'] == data['password']:
+            return Response({'status':'success'})
+        # print(checkData)
+        # print(dataset)
+        # print(dataset.values()[0])
+        # serialize = UserSerializerAll(data = dataset)
+        # if serialize.is_valid():
+        
+            
+        # print(data[''])
+        # serialize = UserSerializerAll(data = data)
+        # print(serialize.data)
+        # if serialize.is_valid():
+            # print(data)
+            # print(serialize.data)
+        return Response({'status':'fail'})
 
 
 class PaymentListEP(mixins.ListModelMixin,mixins.CreateModelMixin,generics.GenericAPIView):

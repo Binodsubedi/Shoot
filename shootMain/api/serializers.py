@@ -8,7 +8,6 @@ class UserSerializer(serializers.ModelSerializer):
         model= User
         exclude = ("password",)
 
-
 class PaymentSerializer(serializers.ModelSerializer):
 
     class Meta:
