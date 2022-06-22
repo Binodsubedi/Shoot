@@ -47,6 +47,16 @@ app.post('/file', imgUpload, (req, res) => {
   });
 });
 
+app.get('/filedownload/photo/:name', (req, res) => {
+  const { name } = req.params;
+  res.download(`./files/photos/${name}`);
+});
+
+app.get('/filedownload/video/:name', (req, res) => {
+  const { name } = req.params;
+  res.download(`./files/videos/${name}`);
+});
+
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
