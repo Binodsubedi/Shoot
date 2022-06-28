@@ -32,28 +32,31 @@ class UserSpecificEP(mixins.RetrieveModelMixin,mixins.UpdateModelMixin,mixins.De
 
 class UserCheckEP(APIView):
     def post(self, request):
-        # print(request.data['username'])
-        total = User.objects.all()
-        # data = User.objects.get(username=request.data['username'])
-        data = request.data
-        checkData = total.filter(username=request.data['username']).values()[0]
+        try:
+            # print(request.data['username'])
+            total = User.objects.all()
+            # data = User.objects.get(username=request.data['username'])
+            data = request.data
+            checkData = total.filter(username=request.data['username']).values()[0]
 
-        if checkData and checkData['username'] == data['username'] and checkData['password'] == data['password']:
-            return Response({'status':'success'})
-        # print(checkData)
-        # print(dataset)
-        # print(dataset.values()[0])
-        # serialize = UserSerializerAll(data = dataset)
-        # if serialize.is_valid():
-        
+            if checkData and checkData['username'] == data['username'] and checkData['password'] == data['password']:
+                return Response({'status':'success'})
+            # print(checkData)
+            # print(dataset)
+            # print(dataset.values()[0])
+            # serialize = UserSerializerAll(data = dataset)
+            # if serialize.is_valid():
             
-        # print(data[''])
-        # serialize = UserSerializerAll(data = data)
-        # print(serialize.data)
-        # if serialize.is_valid():
-            # print(data)
+                
+            # print(data[''])
+            # serialize = UserSerializerAll(data = data)
             # print(serialize.data)
-        return Response({'status':'fail'})
+            # if serialize.is_valid():
+                # print(data)
+                # print(serialize.data)
+            return Response({'status':'fail'})
+        except:
+            return Response({'status':'fail'})
 
 
 class PaymentListEP(mixins.ListModelMixin,mixins.CreateModelMixin,generics.GenericAPIView):

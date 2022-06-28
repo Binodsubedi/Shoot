@@ -1,4 +1,5 @@
 from dataclasses import field, fields
+from importlib.resources import files
 from rest_framework import serializers
 from shootMain.models import User,Payment,Photos,Videos
 
@@ -6,7 +7,8 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model= User
-        exclude = ("password",)
+        # exclude = ("password",)
+        fields= "__all__"
 
 class PaymentSerializer(serializers.ModelSerializer):
 
