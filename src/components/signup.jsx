@@ -58,6 +58,31 @@ let balance;
 
 
 
+    }else if(choice==='King'){
+
+        if(balance > 0.2*10**18){
+
+            const data = await axiosConfig.post('app/user',{username:user,plan:choice,password:pass})
+            // console.log(data)
+            if(data){
+                
+                await cloudStore.methods.payment(2).send({
+                    from:accounts[0],
+                    value: web3.utils.toWei('0.2', 'ether')
+                });
+
+                await axiosConfig.post('app/payment',{uid:data.data.id})
+
+                //after completing payment
+                alert('New Account Created!!!')
+            }
+        
+            
+        }else{
+            alert('Please check your balance')
+        }
+
+
     }
 
   } 
