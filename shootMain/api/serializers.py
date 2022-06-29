@@ -3,12 +3,7 @@ from importlib.resources import files
 from rest_framework import serializers
 from shootMain.models import User,Payment,Photos,Videos
 
-class UserSerializer(serializers.ModelSerializer):
 
-    class Meta:
-        model= User
-        # exclude = ("password",)
-        fields= "__all__"
 
 class PaymentSerializer(serializers.ModelSerializer):
 
@@ -27,3 +22,14 @@ class VideoSerializer(serializers.ModelSerializer):
     class Meta:
         model= Videos
         fields = "__all__"
+        
+        
+class UserSerializer(serializers.ModelSerializer):
+    
+    photos = PhotoSerializer(many=True,read_only=True)
+    videos = VideoSerializer(many=True,read_only=True)
+
+    class Meta:
+        model= User
+        # exclude = ("password",)
+        fields= "__all__"

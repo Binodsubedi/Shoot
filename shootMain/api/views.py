@@ -40,7 +40,7 @@ class UserCheckEP(APIView):
             checkData = total.filter(username=request.data['username']).values()[0]
 
             if checkData and checkData['username'] == data['username'] and checkData['password'] == data['password']:
-                return Response({'status':'success'})
+                return Response({'status':'success','data':checkData})
             # print(checkData)
             # print(dataset)
             # print(dataset.values()[0])
