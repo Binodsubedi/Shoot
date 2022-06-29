@@ -1,14 +1,23 @@
 import React, { useRef } from "react";
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import './../styles/login.css'
 import axiosConfig from "../axiosConfig";
+import { connect } from "react-redux";
+import {login,UserStruc} from './../actions/index'
+import { StoreState } from "../reducers";
+
+interface PropsIn{
+    login:any
+}
 
 
-const Login = ()=>{
+const Login = (props:PropsIn)=>{
 
 
     const user = useRef<HTMLInputElement>(null)
     const pass = useRef<HTMLInputElement>(null)
+
+    const navigate = useNavigate()
 
     const loginSubmitHandler = async(e:any)=>{
         e.preventDefault();
@@ -21,7 +30,14 @@ const Login = ()=>{
         // console.log(loginCheck.data)
 
         if(loginCheck.data.status === 'success'){
-            alert("You are logged in!")
+
+            let userData = loginCheck.data.data
+            console.log(userData)
+            props.login(userData.id,userData.username,userData.password,userData.plan)
+
+            navigate('/dashboard/upload');
+
+            // alert("You are logged in!")
         }
         else{
             alert("Wrong Credentials")
@@ -52,4 +68,7 @@ const Login = ()=>{
         </div>)
 }
 
-export default Login;
+
+export default connect(
+null,{login}
+)(Login);

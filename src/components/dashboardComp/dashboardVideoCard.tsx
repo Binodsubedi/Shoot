@@ -1,10 +1,10 @@
 import React from 'react'
 
-const DashboardVideoCard = () => {
+const DashboardVideoCard = ({fileName}) => {
   return (
     <div className="DVBody__cardContainer">
         <div className='DVBody__cardContainer-image'></div>
-        <h2>FileName.mp4</h2>
+        <h2>{fileName}</h2>
         <div className='DVBody__cardContainer-download'></div>
     </div>
   )

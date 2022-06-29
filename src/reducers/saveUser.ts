@@ -4,7 +4,8 @@ import { UserStruc, LoginData } from "../actions";
 const defaultUserState = {
     username:'unknown',
     password:'unknown',
-    id:0
+    id:0,
+    plan:"unknown"
 }
 
 

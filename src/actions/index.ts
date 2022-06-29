@@ -6,6 +6,7 @@ export interface UserStruc{
     username:string;
     password:string;
     id:number;
+    plan:string;
 }
 
 export interface PhotoStruc{
@@ -37,10 +38,10 @@ export interface VideoData{
 }
 
 
-export const login = (username:string,password:string,id:number)=>{
+export const login = (id:number,username:string,password:string,plan:string)=>{
     const action:LoginData = {
         type:ActionTypes.loginUser,
-        payload:{username,password,id}
+        payload:{username,password,id,plan}
     }
     return action
 }
