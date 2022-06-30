@@ -31,7 +31,7 @@ const upload = multer({
   storage: multerStorage,
 });
 
-const imgUpload = upload.single('file');
+const allUpload = upload.single('file');
 
 app.post('/', (req, res) => {
   const { body } = req;
@@ -39,7 +39,7 @@ app.post('/', (req, res) => {
   res.status(200).json(body);
 });
 
-app.post('/file', imgUpload, (req, res) => {
+app.post('/file', allUpload, (req, res) => {
   //   console.log(req.file);
   res.status(201).json({
     status: 'success',
@@ -57,7 +57,7 @@ app.get('/filedownload/video/:name', (req, res) => {
   res.download(`./files/videos/${name}`);
 });
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 app.listen(port, () => {
   console.log(`Listening to port ${port}.........`);
