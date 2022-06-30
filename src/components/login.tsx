@@ -32,7 +32,7 @@ const Login = (props:PropsIn)=>{
         if(loginCheck.data.status === 'success'){
 
             let userData = loginCheck.data.data
-            console.log(userData)
+            // console.log(userData)
             props.login(userData.id,userData.username,userData.password,userData.plan)
 
             navigate('/dashboard/upload');

@@ -24,7 +24,7 @@ const DashboardPictureBody = (props:PropsIn) => {
 
   const photosItterator = ()=>{
     return props.photos.map(el=>{
-      return <DashboardPictureCard fileName={el.photoName} />
+      return <DashboardPictureCard key={el.id} fileName={el.photoName} />
     })
   }
 

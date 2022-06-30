@@ -22,7 +22,7 @@ const DashboardVideoBody = (props:PropsIn) => {
   const videosItterator = ()=>{
     return props.videos.map((el)=>{
 
-      return <DashboardVideoCard fileName={el.videoName} />
+      return <DashboardVideoCard key={el.id} fileName={el.videoName} />
 
     })
   }
